@@ -20,9 +20,7 @@ function App() {
 
   const newPostMutation = useMutation({
     mutationFn: (title) => {
-      return wait(1000).then(() =>
-        POSTS.push({ id: crypto.randomUUID(), title })
-      );
+      return wait(1000).then(() => POSTS.push({ id: POSTS.length + 1, title }));
     },
     onSuccess: () => {
       queryClient.invalidateQueries(["posts"]);
