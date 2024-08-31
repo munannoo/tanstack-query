@@ -12,9 +12,7 @@ export default function Post1() {
     return <h1>{JSON.stringify(postQuery.error)}</h1>;
   }
 
-  {
-    console.log(postQuery);
-  }
+  // {console.log(postQuery);}
 
   return (
     <div>
